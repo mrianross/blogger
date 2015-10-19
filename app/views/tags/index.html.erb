@@ -1,0 +1,13 @@
+<h1>All Tags</h1>
+
+<ul id="tags">
+	<% @tags.each do |tag| %>
+	<li>
+		<%= link_to tag.name, tag_path(tag) %>
+	</li>
+	<% end %>
+
+	<%= link_to "Destroy a tag", tag_path([:id]), method: :delete, data: {confirm: "Do you really want to destroy the tag?"} %>
+
+</ul>
+
